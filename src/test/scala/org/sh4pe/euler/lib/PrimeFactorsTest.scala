@@ -25,4 +25,12 @@ class PrimeFactorsTest extends FunSuite {
     assert(PrimeFactors.of(7).toList === List(7))
     assert(PrimeFactors.of(8).toList === List(2,2,2))
   }
+
+  test("PrimeFactors.frequencies") {
+    assert(PrimeFactors.frequencies(5) === Map(5 -> 1))
+    assert(PrimeFactors.frequencies(6) === Map(2 -> 1, 3 -> 1))
+    assert(PrimeFactors.frequencies(7) === Map(7 -> 1))
+    assert(PrimeFactors.frequencies(8) === Map(2 -> 3))
+    assert(PrimeFactors.frequencies(12) === Map(2 -> 2, 3 -> 1))
+  }
 }

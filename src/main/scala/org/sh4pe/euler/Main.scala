@@ -6,7 +6,9 @@ object Main extends App {
   val problems = Map(
     "1" -> new P1,
     "2" -> new P2,
-    "3" -> new P3
+    "3" -> new P3,
+    "4" -> new P4,
+    "5" -> new P5,
   )
 
   if (args.length == 0) {

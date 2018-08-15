@@ -41,4 +41,17 @@ object PrimeFactors {
       }
     }
   }
+
+  def frequencies(n: Long) : Map[Long,Int] = {
+    val factors = of(n).toSeq
+    factors.foldLeft((Map[Long, Int](), factors.head, 0))((acc, f) => {
+      val (curMap, curFactor, curCount) = acc
+      if (f == curFactor) {
+        val newCount = curCount + 1
+        (curMap + (curFactor -> newCount), curFactor, curCount + 1)
+      } else {
+        (curMap + (f -> 1), f, 1)
+      }
+    })._1
+  }
 }
