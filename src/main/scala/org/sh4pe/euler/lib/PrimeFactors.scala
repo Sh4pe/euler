@@ -54,4 +54,8 @@ object PrimeFactors {
       }
     })._1
   }
+
+  def isPrime(n: Long) : Boolean = {
+    factorize(n)._2 == 1
+  }
 }

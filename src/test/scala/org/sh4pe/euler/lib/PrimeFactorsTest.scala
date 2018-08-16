@@ -33,4 +33,15 @@ class PrimeFactorsTest extends FunSuite {
     assert(PrimeFactors.frequencies(8) === Map(2 -> 3))
     assert(PrimeFactors.frequencies(12) === Map(2 -> 2, 3 -> 1))
   }
+
+  test("PrimeFactors.isPrime") {
+    assert(PrimeFactors.isPrime(2))
+    assert(PrimeFactors.isPrime(2))
+    assert(PrimeFactors.isPrime(5))
+    assert(PrimeFactors.isPrime(7))
+    assert(PrimeFactors.isPrime(23))
+
+    assert(!PrimeFactors.isPrime(22))
+    assert(!PrimeFactors.isPrime(99))
+  }
 }

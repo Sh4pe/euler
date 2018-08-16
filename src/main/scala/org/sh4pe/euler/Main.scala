@@ -9,6 +9,8 @@ object Main extends App {
     "3" -> new P3,
     "4" -> new P4,
     "5" -> new P5,
+    "6" -> new P6,
+    "7" -> new P7,
   )
 
   if (args.length == 0) {
